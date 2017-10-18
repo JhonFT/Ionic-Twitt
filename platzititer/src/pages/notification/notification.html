@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+      <ion-list>
+          <ion-item *ngFor="let not of notifications">
+            <ion-thumbnail item-start>
+              <img [src]="not.img" >
+            </ion-thumbnail>
+            <h2>{{not.nick_name}}</h2>
+            <p>{{not.text}}</p>
+            <button (tap)="verNotofication(not)" ion-button clear item-end>View</button>
+          </ion-item>
+        </ion-list>
+</ion-content>
